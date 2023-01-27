@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seyahat Rehberi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light fixed-top navbar-expand-md bg-faded justify-content-center">
+        <a href="index.html" class="navbar-brand d-flex w-50 mr-auto nav-link"><i class="">Seyahat Rehberi</i></a>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" class="planla" style="border-right: 1px solid #010005;">Planla & Uç</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="giris" aria-hidden="true"></i>GİRİŞ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="main">
+        <div id="booking" class="section">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="booking-form">
+                                <form action="searchFlights" onsubmit="validateSearch()">
+                                    <div class="form-group">
+                                        <div class="form-checkbox">
+                                        </div>
+                                    </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Nereden</span>
+                                                <select name="source" id="source" class="form-control">
+                                                    <option value="istanbul">İstanbul</option>
+                                                    <option value="ankara">Ankara</option>
+                                                    <option value="izmir">İzmir</option>
+                                                    <option value="mugla">Muğla</option>
+                                                    <option value="canakkale">Çanakkale</option>
+                                                    <option value="antalya">Antalya</option>
+                                                    <option value="edirne">Edirne</option>
+                                                    <option value="manisa">Manisa</option>
+                                                    <option value="denizli">Denizli</option>
+                                                    <option value="mersin">Mersin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Nereye</span>
+                                                <select name="destination" id="destination" class="form-control">
+                                                    <option value="istanbul">İstanbul</option>
+                                                    <option value="ankara">Ankara</option>
+                                                    <option value="izmir">İzmir</option>
+                                                    <option value="mugla">Muğla</option>
+                                                    <option value="canakkale">Çanakkale</option>
+                                                    <option value="antalya">Antalya</option>
+                                                    <option value="edirne">Edirne</option>
+                                                    <option value="manisa">Manisa</option>
+                                                    <option value="denizli">Denizli</option>
+                                                    <option value="mersin">Mersin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <span class="form-label">Gidiş</span>
+                                                <input class="form-control" type="date" id="datepicker1" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Dönüş</span>
+                                                        <input class="form-control" type="date" required>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Yetişkin (18+)</span>
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Çocuk (0-17)</span>
+                                                <select class="form-control">
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                </select>
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Kabin Seçimi</span>
+                                                <select class="form-control">
+                                                    <option>Economy (EC)</option>
+                                                    <option>Business Class (BC)</option>
+                                                </select>
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-btn">
+                                        <button class="submit-btn">Uçuş Ara</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                      <img src="./image.jpg/izmir.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">İzmir; Türkiye'nin üçüncü büyük şehri olan İzmir, çağdaş, gelişmiş, aynı zamanda işlek bir ticaret merkezidir.İzmir'in batısında nefis renkli denizi, plajları ve termal merkezleriyle Çeşme Yarımadası'na uzanır.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                      <img src="./image.jpg/canakkale.jpg" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <p class="card-text">Çanakkale; Balkan Yarımadası'nın Doğu Trakya topraklarına bir kıstakla bağlanmış Gelibolu Yarımadası ile, Anadolu'nun batı uzantısı olan Biga Yarımadası üzerinde toprakları bulunan bir ilimizdir.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                      <img src="./image.jpg/mugla.jpg" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <p class="card-text">Muğla; Ülkemizin en uzun sahil şeridine sahip ilidir. En büyük ilçesi Fethiye'dir. Muğla ilinde ayrıca iki büyük göl bulunmaktadır. Bunlar, Milas ile Aydın ilinin Söke ilçesi sınırlarının içine de giren Bafa Gölü ile Köyceğiz ilçesindeki Köyceğiz Gölü'dür.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    var date = new Date();
+    date.setDate(date.getDate());
+    
+    $(function () {
+      $("#datepicker1").datepicker({ 
+            format: 'dd/mm/yyyy',
+            //calendarWeeks: true,
+            autoclose: true, 
+            todayHighlight: true,
+            startDate: date
+      }).datepicker('update', new Date());
+    });
+    </script>
+</body>
+
+</html>
